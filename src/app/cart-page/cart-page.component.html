@@ -1,0 +1,16 @@
+<app-navigation [cartNumber]="countCartItems"></app-navigation>
+<div class="shopping-cart">
+  <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+    <img [src]="item.img" width="70"/>
+    <div class="text">
+      <h3 class="product-title">{{item.title}}</h3>
+      <a class="btn-remove-item" title="Remove Item Cart" (click)="removeItem(item.id)"><i class="fa fa-trash"></i></a>
+      <div class="product-author">{{item.author}}</div>
+      <div class="product-price">Rp. {{item.price}}</div>
+    </div>
+  </div>
+  <div class="total-price">
+    Total
+    <div class="price">Rp. {{totalPrice}}</div>      
+  </div>
+</div>

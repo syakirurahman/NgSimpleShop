@@ -1,0 +1,46 @@
+.shopping-cart {
+  border:1px solid #ddd;  
+  .cart-item {
+    padding:20px;
+    overflow: hidden;
+    border-bottom:1px solid #ddd;
+    img {
+      float: left;
+      margin-right:20px;
+    }
+    .text {
+      h3.product-title {
+        margin-bottom:10px;
+      }
+      .product-author {
+        display: inline-block;
+      }
+      .product-price {
+        float:right;
+        display:inline-block;
+        padding:0 20px;
+        font-size:20px;
+        font-weight:bold;
+      }
+      a.btn-remove-item {
+        float: right;
+        display: inline-block;
+        font-size:20px;
+        background-color:#128372;
+        color:#fff;
+        cursor: pointer;
+        padding:2px 10px;
+        border-radius:2px;
+      }
+    }
+  }
+  .total-price {
+    padding:20px;
+    font-weight: bold;
+    font-size: 20px;
+    .price {
+      float: right;
+      margin-right:55px;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<app-navigation [cartNumber]="countProductSelected"></app-navigation>
+<div class="products">
+  <div class="product-wrapper" *ngFor="let product of products; let i = index">
+    <div class="product" [class.selected]="product.selected===true">
+      <div class="thumb">
+        <img height="250" [src]="product.img"/>
+      </div>
+      <div class="text">
+        <h3 class="product-title">{{product.title}}</h3>
+        <a class="btn-add-cart" title="Add to Cart" (click)="selectProduct(product.id)"><i class="fa fa-cart-plus"></i></a>
+        <div class="product-author">{{product.author}}</div>
+        <div class="product-price">Rp. {{product.price}}</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="ng-carousel">
+  <div class="carousel-item" [class.active]="activeSlide===item.id" *ngFor="let item of slides; let i = index">
+    <img [src]="item.img"/>
+    <div class="text">
+      <h3>{{item.title}}</h3>
+    </div>
+  </div>
+  <div class="dots">
+    <div class="dot" [class.active]="activeSlide===item.id" *ngFor="let item of slides; let i = index"> 
+    </div>   
+  </div>
+</div>
