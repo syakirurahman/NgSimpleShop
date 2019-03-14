@@ -5,8 +5,6 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CarouselComponent } from './home-page/carousel/carousel.component';
-import { ProductsComponent } from './catalog-page/products/products.component';
-import { ItemsComponent } from './cart-page/items/items.component';
 
 const routes: Routes = [
   { path:'', component:HomePageComponent },
