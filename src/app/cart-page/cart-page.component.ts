@@ -33,7 +33,7 @@ const cartData = [
   styleUrls: ['./cart-page.component.scss']
 })
 export class CartPageComponent implements OnInit {
-  cartItems:object[];
+  cartItems:Array<any>;
   countCartItems:number;
   totalPrice:number;
   constructor() { 

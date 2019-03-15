@@ -28,7 +28,7 @@ const slideData = [
 export class CarouselComponent implements OnInit {
   slides: object[];
   activeSlide:number;
-  constructor() { 
+  constructor() {
     this.slides = slideData;
     this.activeSlide = 1;
   }

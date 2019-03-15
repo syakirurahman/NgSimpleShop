@@ -57,8 +57,8 @@ const productData = [
   styleUrls: ['./catalog-page.component.scss']
 })
 export class CatalogPageComponent implements OnInit {
-  products:object[];
-  productSelected:object[];
+  products: Array<any>;
+  productSelected: Array<any>;
   countProductSelected:number;
   constructor() { 
     this.products = productData;
