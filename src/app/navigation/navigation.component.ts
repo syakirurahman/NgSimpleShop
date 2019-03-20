@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { ProductService } from './../product.service';
 
 @Component({
   selector: 'app-navigation',
@@ -6,12 +7,18 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  @Input() cartNumber:number;
-  constructor() { 
+  cartNumber:number;
+  constructor(private productService: ProductService) { 
     this.cartNumber = 0;
   }
 
   ngOnInit() {
+    this.cartNumber = this.productService.countProductSelected;
+  }
+  
+  ngDoCheck() {
+    console.log(this.productService.countProductSelected);
+    this.cartNumber = this.productService.countProductSelected;
   }
 
 }

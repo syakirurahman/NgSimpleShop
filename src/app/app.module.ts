@@ -4,25 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
-import { CarouselComponent } from './home-page/carousel/carousel.component';
+
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    HomePageComponent,
-    CatalogPageComponent,
-    CartPageComponent,
-    CarouselComponent
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

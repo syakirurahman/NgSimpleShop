@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomePageComponent } from './home-page/home-page.component';
-import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
-import { CarouselComponent } from './home-page/carousel/carousel.component';
-
 const routes: Routes = [
-  { path:'', component:HomePageComponent },
-  { path:'catalog', component:CatalogPageComponent },
-  { path:'cart', component:CartPageComponent },
+  {
+    path:'',
+    loadChildren: './home-page/home-page.module#HomePageModule',
+    pathMatch: 'full'
+  },
+  {
+    path:'catalog',
+    loadChildren: './catalog-page/catalog-page.module#CatalogPageModule'
+  },
+  {
+    path:'cart',
+    loadChildren: './cart-page/cart-page.module#CartPageModule'
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
